@@ -24,7 +24,6 @@ namespace FileParserForm
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
-            int size = -1;
             if(fileDialog.ShowDialog()==DialogResult.OK)
             {
                 textBox1.Text = fileDialog.SafeFileName;
@@ -49,7 +48,7 @@ namespace FileParserForm
             }
             else
             {
-                results.DataSource = interest.getAlias();
+                results.DataSource = interest.ShowAliasJobs();
                 button3.Enabled = true;
             }
         }

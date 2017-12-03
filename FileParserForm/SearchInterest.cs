@@ -9,27 +9,60 @@ namespace FileParserForm
     class SearchInterest
     {
         private string name;
-        private List<string> alias;
+        private List<Alias> aliases = new List<Alias>();
 
         public SearchInterest(string nameIn, string aliasIn)
         {
             name = nameIn;
-            alias = new List<string>();
-            alias.Add(aliasIn);
+            AddAlias(aliasIn);
         }
-        public List<string> getAlias()
+        public List<Alias> getAliases()
         {
-            return alias;
+            return aliases;
         }
 
         public string getName()
         {
             return name;
         }
-
+        public List<String> ShowAliasJobs()
+        {
+            List<String> list = new List<string>();
+            
+            foreach (Alias alias in aliases)
+            {
+                list.Add(alias.GetName());
+                foreach (String item in alias.GetJobs())
+                {
+                    list.Add("\t" + item);
+                }
+            }
+            return list;
+        }
         public void AddAlias(string input)
         {
-            alias.Add(input);
+            string[] alias = input.Split("(".ToArray());
+            Alias check = aliases.Find(x => x.GetName().CompareTo(alias[0]) == 0);
+            if (alias.Length > 1)
+            {
+                alias[1] = alias[1].TrimEnd(')');
+                if (check==null)
+                {
+                    aliases.Add(new Alias(alias[0], alias[1]));
+                }
+                else
+                {
+                    check.AddJob(alias[1]);
+                }
+
+            }
+            else
+            {
+                if (check==null)
+                {
+                    aliases.Add(new Alias(alias[0]));
+                }
+            }
         }
     }
 }

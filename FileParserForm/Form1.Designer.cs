@@ -46,6 +46,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(75, 31);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -82,6 +84,8 @@
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(75, 100);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(225, 20);
@@ -89,6 +93,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Location = new System.Drawing.Point(306, 98);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
@@ -99,6 +104,9 @@
             // 
             // results
             // 
+            this.results.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.results.FormattingEnabled = true;
             this.results.Location = new System.Drawing.Point(75, 127);
             this.results.Name = "results";
@@ -107,6 +115,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(182, 254);
             this.button3.Name = "button3";
@@ -129,8 +138,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
+            this.MinimumSize = new System.Drawing.Size(420, 223);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Searching ";
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

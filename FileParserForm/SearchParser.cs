@@ -29,10 +29,7 @@ namespace FileParserForm
                     SearchInterest interest = listSI.Find(x => x.getName() == inputSI[1]);
                     if (interest!=null)
                     {
-                        if (!interest.getAlias().Exists(x => x == inputSI[0]))
-                        {
-                            interest.AddAlias(inputSI[0]);
-                        }
+                        interest.AddAlias(inputSI[0]);
                     }
                     else
                     {
@@ -65,7 +62,7 @@ namespace FileParserForm
             using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(@filename))
             {
-                foreach (string alias in sI.getAlias())
+                foreach (string alias in sI.ShowAliasJobs())
                 {
                     file.WriteLine(alias);
                 }
