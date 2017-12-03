@@ -57,7 +57,7 @@ namespace FileParserForm
         private void button3_Click(object sender, EventArgs e)
         {
             SearchParser.printResults(interest);
-            MessageBox.Show("File: "+interest.getName()+"_Alias has been printed.");
+            MessageBox.Show("File: "+interest.getName()+"_Alias.txt has been saved.");
         }
     }
 }
