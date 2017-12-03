@@ -61,7 +61,16 @@ namespace FileParserForm
         }
         public static void printResults(SearchInterest sI)
         {
-            
-        }
+            string filename = sI.getName() + "_Alias.txt";
+            using (System.IO.StreamWriter file =
+            new System.IO.StreamWriter(@filename))
+            {
+                foreach (string alias in sI.getAlias())
+                {
+                    file.WriteLine(alias);
+                }
+            }
+        
+    }
     }
 }
